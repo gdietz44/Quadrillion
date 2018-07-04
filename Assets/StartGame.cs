@@ -64,7 +64,13 @@ public class StartGame : MonoBehaviour {
     	Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
     	rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     	rb.mass = 100;
-    	float angle = go.transform.rotation.eulerAngles.z;
+    	setAngle(go);
+    	setPosition(go);
+
+	}
+
+	private void setAngle(GameObject go) {
+		float angle = go.transform.rotation.eulerAngles.z;
     	if (angle > 315 || angle <= 45) {
     		go.transform.eulerAngles = new Vector3(0, 0, 0);
 		} else if (angle > 45 && angle <= 135) {
@@ -74,7 +80,10 @@ public class StartGame : MonoBehaviour {
 		} else if (angle > 225 && angle <= 315) {
 			go.transform.eulerAngles = new Vector3(0, 0, 270);
 		}
+	}
 
+	private void setPosition(GameObject go) {
+		go.transform.position = new Vector3(Mathf.RoundToInt(go.transform.position.x), Mathf.RoundToInt(go.transform.position.y), go.transform.position.z);
 	}
 
 }
