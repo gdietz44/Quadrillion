@@ -41,9 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Tangram
+  - name: Piece
     uniqueID: 2992194103
     locked: 0
-  - name: Active_Tangram
+  - name: Active_Piece
     uniqueID: 3597918045
     locked: 0

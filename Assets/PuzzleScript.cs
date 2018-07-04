@@ -20,6 +20,7 @@ public class PuzzleScript : MonoBehaviour {
 		Sprite puzzle = Resources.Load<Sprite>("q_puzzles/puzzle1");
 		puzzleSpriteRenderer.sprite = puzzle;
 		puzzleSpriteRenderer.transform.position = new Vector3(0, 0, (float)0.01);
+		go.AddComponent<PolygonCollider2D>();
 	}
 
 	// void createNextPuzzleButton() {
